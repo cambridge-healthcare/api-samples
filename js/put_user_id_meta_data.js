@@ -13,10 +13,12 @@ xhr.onreadystatechange = function () {
     }
 }
 
+var params = {data: JSON.stringify({meta_key: "meta_value"})}
+
 xhr.open('PUT', url);
 xhr.setRequestHeader("Content-type","application/x-www-form-urlencoded");
-xhr.setRequestHeader('Authorization', auth('PUT', url));
-xhr.send('data={"meta_key":"meta_value"}');
+xhr.setRequestHeader('Authorization', auth('PUT', url, params));
+xhr.send(ohauth.qsString(params));
 /*
  * {
  *   "meta_data": {

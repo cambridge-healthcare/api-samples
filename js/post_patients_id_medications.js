@@ -13,10 +13,12 @@ xhr.onreadystatechange = function () {
     }
 }
 
+var params = {"values" : "421161003"};
+
 xhr.open('POST', url);
 xhr.setRequestHeader("Content-type","application/x-www-form-urlencoded");
-xhr.setRequestHeader('Authorization', auth('POST', url));
-xhr.send('values=421161003');
+xhr.setRequestHeader('Authorization', auth('POST', url, params));
+xhr.send(ohauth.qsString(params));
 /*
  * [
  *   {

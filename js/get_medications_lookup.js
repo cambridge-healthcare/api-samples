@@ -3,7 +3,7 @@ var auth = ohauth.headerGenerator({
     consumer_secret: '6aa8566be1f0a697b3a2dbb97119cf6d'
 });
 
-var url = 'https://api.howareyou.com/medications/lookup.json?ids=431161003';
+var url = 'https://api.howareyou.com/medications/lookup.json?ids=421161003';
 
 var xhr = new XMLHttpRequest();
 
