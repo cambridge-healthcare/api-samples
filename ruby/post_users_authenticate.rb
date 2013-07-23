@@ -1,19 +1,17 @@
-require 'oauth'
 require 'json'
+require 'net/https'
 
-CONSUMER_KEY = "bf71f03a76e68b10f984797bd3cd3311"
-CONSUMER_SECRET = "6aa8566be1f0a697b3a2dbb97119cf6d"
+params = {'email' => 'demo@howareyou.com', 'password' => 'Password1'}
 
-consumer = OAuth::Consumer.new(
-  CONSUMER_KEY,
-  CONSUMER_SECRET,
-  :site         => "https://api.howareyou.com",
-)
+uri = URI.parse('https://api.howareyou.com/users/authenticate')
 
-access_token = OAuth::AccessToken.new(consumer)
+http = Net::HTTP.new(uri.host, uri.port)
+http.use_ssl = true
 
-params = {:email => "demo@howareyou.com", :password => "Password1"}
-response = access_token.post("/users/authenticate", params)
+req = Net::HTTP::Post.new(uri.path, params)
+req.set_form_data(params)
+
+response = http.request(req)
 
 p JSON.parse(response.body)
 
