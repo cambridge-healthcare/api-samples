@@ -20,6 +20,6 @@ p JSON.parse(response.body)
 # [
 #   {
 #     "id"   => 421161003,
-#     aterm" => "Beeswax"
+#     "term" => "Beeswax"
 #   }
 # ]
