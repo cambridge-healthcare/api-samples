@@ -1,7 +1,7 @@
 (function () {
   var auth = ohauth.headerGenerator({
-    consumer_key:    'bf71f03a76e68b10f984797bd3cd3311',
-    consumer_secret: '6aa8566be1f0a697b3a2dbb97119cf6d'
+    consumer_key:    '6aa8d2199357db6670b03653f35a2e91',
+    consumer_secret: '8fa254320524c355da88df808fc4c25e'
   });
 
   var url = 'https://api.howareyou.com/medications/lookup.json?ids=421161003';
@@ -21,9 +21,10 @@
 
 /*
  * [
- *   {
- *     "id": 421161003,
- *     "term": "Beeswax"
- *   }
+ *     {
+ *         "snomed_concept_id": 421161003,
+ *         "term": "Beeswax",
+ *         "synonyms": [ ]
+ *     }
  * ]
  */
