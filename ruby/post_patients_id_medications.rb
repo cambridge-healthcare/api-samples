@@ -1,8 +1,8 @@
 require 'oauth'
 require 'json'
 
-CONSUMER_KEY = "bf71f03a76e68b10f984797bd3cd3311"
-CONSUMER_SECRET = "6aa8566be1f0a697b3a2dbb97119cf6d"
+CONSUMER_KEY = "6aa8d2199357db6670b03653f35a2e91"
+CONSUMER_SECRET = "8fa254320524c355da88df808fc4c25e"
 
 consumer = OAuth::Consumer.new(
   CONSUMER_KEY,
@@ -13,16 +13,12 @@ consumer = OAuth::Consumer.new(
 access_token = OAuth::AccessToken.new(consumer)
 
 params = {"values" => "421161003"}
-response = access_token.post("/patients/da0ff676622eaa2faee450b231b322c4/medications.json", params)
 
-p JSON.parse(response.body)
+# Note that this is the patient_id rather than the user id
+# The patient_id must be used for all clinical data interations
+response = access_token.post("/patients/f1dc858d5682c9d76722847399b4bf8e/medications.json", params)
+
+p response.body
 
 # =>
-# [
-#   {
-#     "concept_id" => 421161003,
-#     "timestamp"  => 1374500350,
-#     "id"         => "1374500350:421161003"
-#   }
-# ]
-
+#   ""
