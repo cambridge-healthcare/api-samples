@@ -36,8 +36,8 @@
  *         "user_id": "7b33dbb398811023a8512cbda455c0c9"
  *     },
  *     "session": {
- *         "id": "+agf7ya6ChJisDSJv/Nmr4intQTVTNOmDlBe7Zx6m3s=",
- *         "key": "tWzHJ1FhbGm2cTr8ETy0Z4UMhDKFVvvNHXJbiulpKAw=",
+ *         "id": "DMjIvrewGtwVKkD/UIVAUwrtrnNi81U7BSv8MR4YIBU=",
+ *         "key": "h0058POWHRm95zMYMh8uEvdLDcoTYKOssdmQzwnc60c=",
  *         "expiry": 1378831979
  *     }
  * }

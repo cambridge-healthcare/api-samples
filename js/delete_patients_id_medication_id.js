@@ -23,10 +23,9 @@
   // These values are required to decrypt data
   // You will have to obtain a new session id and key from the authentication endpoint
   xhr.setRequestHeader('X-CHID-SESSION', JSON.stringify({
-      "id":  "+agf7ya6ChJisDSJv/Nmr4intQTVTNOmDlBe7Zx6m3s=",
-      "key": "tWzHJ1FhbGm2cTr8ETy0Z4UMhDKFVvvNHXJbiulpKAw="
-    })
-  );
+    "id":  "DMjIvrewGtwVKkD/UIVAUwrtrnNi81U7BSv8MR4YIBU=",
+    "key": "h0058POWHRm95zMYMh8uEvdLDcoTYKOssdmQzwnc60c="
+  }));
 
   xhr.send();
 })();
