@@ -10,9 +10,18 @@ consumer = OAuth::Consumer.new(
   :site         => "https://api.howareyou.com",
 )
 
+# These values are required to decrypt data
+# You will have to obtain a new session id and key from the authentication endpoint
+headers = {
+  "X-CHID-SESSION" => JSON.dump({
+    "id"  => "pnduY3LKi1VDU/zFKMFQNJW2Whkuq9girqVCiSQnTTs=",
+    "key" => "22E7lsPE44GoIVBNVjPNgWHlfOD6urHpN53Clh7NNUA=",
+  }),
+}
+
 access_token = OAuth::AccessToken.new(consumer)
 
-response = access_token.get("/medications/search.json?term=bees")
+response = access_token.get("/medications/search.json?term=bees", headers)
 
 p JSON.parse(response.body)
 
