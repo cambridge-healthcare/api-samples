@@ -4,7 +4,7 @@
     consumer_secret: '8fa254320524c355da88df808fc4c25e'
   });
 
-  // Note that this is the patient_id rather than the user id
+  // Note that f1dc85[…] is the patient_id rather than the user_id
   // The patient_id must be used for all clinical data interations
   var url = 'https://api.howareyou.com/patients/f1dc858d5682c9d76722847399b4bf8e/medications/421161003.json';
 
