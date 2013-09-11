@@ -19,7 +19,7 @@ headers = {
   }),
 }
 
-access_token = OAuth::AccessToken.new(consumer)
+access_token = OAuth::AccessToken.new(consumer, headers)
 
 # Note that this is the patient_id rather than the user id
 # The patient_id must be used for all clinical data interations

@@ -25,7 +25,7 @@ access_token = OAuth::AccessToken.new(consumer)
 
 # Note that this is the patient_id rather than the user id
 # The patient_id must be used for all clinical data interations
-response = access_token.post("/patients/f1dc858d5682c9d76722847399b4bf8e/medications.json", params)
+response = access_token.post("/patients/f1dc858d5682c9d76722847399b4bf8e/medications.json", params, headers)
 
 p response.body
 
