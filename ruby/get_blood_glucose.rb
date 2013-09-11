@@ -3,7 +3,6 @@ require 'json'
 
 CONSUMER_KEY = "6aa8d2199357db6670b03653f35a2e91"
 CONSUMER_SECRET = "8fa254320524c355da88df808fc4c25e"
-PATIENT_ID = "f1dc858d5682c9d76722847399b4bf8e"
 
 consumer = OAuth::Consumer.new(
   CONSUMER_KEY,
@@ -23,7 +22,9 @@ headers = {
 
 access_token = OAuth::AccessToken.new(consumer)
 
-response = access_token.get("/patients/#{PATIENT_ID}/blood_glucose?limit=1", headers)
+# Note that f1dc85[…] is the patient_id rather than the user_id
+# The patient_id must be used for all clinical data interations
+response = access_token.get("/patients/f1dc858d5682c9d76722847399b4bf8e/blood_glucose?limit=1", headers)
 
 p JSON.parse(response.body)
 
