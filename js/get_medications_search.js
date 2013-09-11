@@ -32,7 +32,7 @@
  *     {
  *         "snomed_concept_id": 421161003,
  *         "term": "Beeswax",
- *         "synonyms": [ ]
+ *         "synonyms": []
  *     }
  * ]
  */
