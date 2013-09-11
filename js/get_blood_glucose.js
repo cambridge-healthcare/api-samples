@@ -32,11 +32,11 @@
 /*
  * [
  *     {
- *             "value" => 5.0,
- *         "timestamp" => 1378894473,
- *              "unit" => "mmol/L",
- *                "id" => "1378894473:50",
- *              "type" => "Serum"
+ *             "value": 5.0,
+ *         "timestamp": 1378894473,
+ *              "unit": "mmol/L",
+ *                "id": "1378894473:50",
+ *              "type": "Serum"
  *     }
  * ]
  */
