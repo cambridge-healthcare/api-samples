@@ -10,13 +10,22 @@ consumer = OAuth::Consumer.new(
   :site         => "https://api.howareyou.com",
 )
 
-access_token = OAuth::AccessToken.new(consumer)
+# These values are required to decrypt data
+# You will have to obtain a new session id and key from the authentication endpoint
+headers = {
+  "X-CHID-SESSION" => JSON.dump({
+    "id"  => "pnduY3LKi1VDU/zFKMFQNJW2Whkuq9girqVCiSQnTTs=",
+    "key" => "22E7lsPE44GoIVBNVjPNgWHlfOD6urHpN53Clh7NNUA=",
+  }),
+}
 
 params = {"values" => "421161003"}
 
+access_token = OAuth::AccessToken.new(consumer)
+
 # Note that this is the patient_id rather than the user id
 # The patient_id must be used for all clinical data interations
-response = access_token.post("/patients/f1dc858d5682c9d76722847399b4bf8e/medications.json", params)
+response = access_token.post("/patients/f1dc858d5682c9d76722847399b4bf8e/medications.json", params, headers)
 
 p response.body
 
