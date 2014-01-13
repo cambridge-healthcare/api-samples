@@ -1,38 +1,35 @@
 require 'oauth'
 require 'json'
 
-CONSUMER_KEY = "6aa8d2199357db6670b03653f35a2e91"
-CONSUMER_SECRET = "8fa254320524c355da88df808fc4c25e"
+CONSUMER_KEY = "e4a55dbd46312950cf0d288ff42d74b4"
+CONSUMER_SECRET = "b1f8c1c8388ef7c3cd4268ebfb733ba1"
 
 consumer = OAuth::Consumer.new(
-  CONSUMER_KEY,
-  CONSUMER_SECRET,
-  :site         => "https://api.howareyou.com",
+    CONSUMER_KEY,
+    CONSUMER_SECRET,
+    :site         => "https://api.howareyou.com",
 )
-
-access_token = OAuth::AccessToken.new(consumer)
-
-#The data field must be a JSON string.
-data = JSON.dump("meta_key" => "meta_value")
-params = {"data" => data}
 
 # These values are required to decrypt data
 # You will have to obtain a new session id and key from the authentication endpoint
 headers = {
   "X-CHID-SESSION" => JSON.dump({
-    "id"  => "DMjIvrewGtwVKkD/UIVAUwrtrnNi81U7BSv8MR4YIBU=",
-    "key" => "h0058POWHRm95zMYMh8uEvdLDcoTYKOssdmQzwnc60c=",
+    "id"  => "DEzQvQE+O+JrgbZtf8+xK7IYuySQTfLMbpHHYx/wyzk=",
+    "key" => "+NJmNrd4E5L6t/T37DZKauOGzlQT28ODko72J2T/Vgg=",
   }),
 }
 
-response = access_token.put("/users/7b33dbb398811023a8512cbda455c0c9/meta_data.json", params, headers)
+access_token = OAuth::AccessToken.new(consumer)
+
+params = {"key" => "meta-key", "value" => "meta-value"}
+
+response = access_token.put("/users/c5323558d6750f5571655b71ae2a2380/meta_data.json", params, headers)
 
 p JSON.parse(response.body)
 
 # =>
 # {
-#   "meta_data" => {
-#     "user_id" => "da0ff676622eaa2faee450b231b322c4",
-#     "data"    => "{\"meta_key\" : \"meta_value\"}"
-#   }
+#     "key"     => "meta_key",
+#     "value"   => "meta_value",
+#     "user_id" => "c5323558d6750f5571655b71ae2a2380",
 # }

@@ -14,10 +14,11 @@ consumer = OAuth::Consumer.new(
 # You will have to obtain a new session id and key from the authentication endpoint
 headers = {
   "X-CHID-SESSION" => JSON.dump({
-    "id"  => "DMjIvrewGtwVKkD/UIVAUwrtrnNi81U7BSv8MR4YIBU=",
-    "key" => "h0058POWHRm95zMYMh8uEvdLDcoTYKOssdmQzwnc60c=",
+    "id"  => "DEzQvQE+O+JrgbZtf8+xK7IYuySQTfLMbpHHYx/wyzk=",
+    "key" => "+NJmNrd4E5L6t/T37DZKauOGzlQT28ODko72J2T/Vgg=",
   }),
 }
+
 
 access_token = OAuth::AccessToken.new(consumer)
 

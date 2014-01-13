@@ -18,18 +18,17 @@ p JSON.parse(response.body)
 # =>
 # {
 #   "user" => {
-#                  "id" => "7b33dbb398811023a8512cbda455c0c9",
+#                  "id" => "c5323558d6750f5571655b71ae2a2380",
 #               "email" => "demo@howareyou.com",
 #          "first_name" => "Demo",
 #           "last_name" => "User",
 #                "type" => "patient",
-#          "creator_id" => "",
-#          "patient_id" => "f1dc858d5682c9d76722847399b4bf8e"
+#          "patient_id" => "658e810c58653ddf197e13e2fae4cd8a"
 #   },
 #   "consumer_token" => {
 #                 "key" => "6aa8d2199357db6670b03653f35a2e91",
 #              "secret" => "8fa254320524c355da88df808fc4c25e",
-#             "user_id" => "7b33dbb398811023a8512cbda455c0c9"
+#             "user_id" => "c5323558d6750f5571655b71ae2a2380"
 #   },
 #   "session" => {
 #                  "id" => "pnduY3LKi1VDU/zFKMFQNJW2Whkuq9girqVCiSQnTTs=",
