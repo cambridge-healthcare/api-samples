@@ -29,13 +29,13 @@
 
 /*
  * {
- *     "user" => {
- *         "id"         => "c5323558d6750f5571655b71ae2a2380",
- *         "email"      => "demo@howareyou.com",
- *         "first_name" => "Demo",
- *         "last_name"  => "User",
- *         "type"       => "patient",
- *         "patient_id" => "658e810c58653ddf197e13e2fae4cd8a"
+ *     "user": {
+ *         "id":         "c5323558d6750f5571655b71ae2a2380",
+ *         "email":      "demo@howareyou.com",
+ *         "first_name": "Demo",
+ *         "last_name":  "User",
+ *         "type":       "patient",
+ *         "patient_id": "658e810c58653ddf197e13e2fae4cd8a"
  *     }
  * }
 */

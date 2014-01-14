@@ -32,8 +32,8 @@
 
 /*
  * {
- *     "key"     => "meta_key",
- *     "value"   => "meta_value",
- *     "user_id" => "c5323558d6750f5571655b71ae2a2380",
+ *     "key":     "meta_key",
+ *     "value":   "meta_value",
+ *     "user_id": "c5323558d6750f5571655b71ae2a2380",
  * }
  */
