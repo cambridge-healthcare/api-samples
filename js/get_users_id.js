@@ -28,11 +28,14 @@
 })();
 
 /*
- * [
- *     {
- *         "concept_id": 421161003,
- *         "timestamp": 1378829577,
- *         "id": "1378829577:421161003"
+ * {
+ *     "user" => {
+ *         "id"         => "c5323558d6750f5571655b71ae2a2380",
+ *         "email"      => "demo@howareyou.com",
+ *         "first_name" => "Demo",
+ *         "last_name"  => "User",
+ *         "type"       => "patient",
+ *         "patient_id" => "658e810c58653ddf197e13e2fae4cd8a"
  *     }
- * ]
- */
+ * }
+*/

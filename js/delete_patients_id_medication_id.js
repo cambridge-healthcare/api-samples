@@ -6,7 +6,7 @@
 
   // Note that f1dc85[…] is the patient_id rather than the user_id
   // The patient_id must be used for all clinical data interations
-  var url = 'https://api.howareyou.com/patients/f1dc858d5682c9d76722847399b4bf8e/medications/421161003.json';
+  var url = 'https://api.howareyou.com/patients/658e810c58653ddf197e13e2fae4cd8a/medications/7e0f54c3-98b6-41a8-9e95-06958eebdf2c.json';
 
   var xhr = new XMLHttpRequest();
 
@@ -30,6 +30,5 @@
   xhr.send();
 })();
 
-/*
- * 1
- */
+// The response body is either empty if no deletion happens
+// or {} if it is deleted.

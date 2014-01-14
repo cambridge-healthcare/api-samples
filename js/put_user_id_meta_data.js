@@ -4,7 +4,7 @@
     consumer_secret: '8fa254320524c355da88df808fc4c25e'
   });
 
-  var url = 'https://api.howareyou.com/users/7b33dbb398811023a8512cbda455c0c9/meta_data.json';
+  var url = 'https://api.howareyou.com/users/c5323558d6750f5571655b71ae2a2380/meta_data.json';
 
   var xhr = new XMLHttpRequest();
 
@@ -14,7 +14,7 @@
     }
   }
 
-  var params = {data: JSON.stringify({meta_key: 'meta_value'})}
+  var params = { key:'meta-key', value:'meta-value' }
 
   xhr.open('PUT', url);
   xhr.setRequestHeader('Content-type','application/x-www-form-urlencoded');
@@ -32,9 +32,8 @@
 
 /*
  * {
- *     "meta_data": {
- *         "user_id": "7b33dbb398811023a8512cbda455c0c9",
- *         "data": "{\"meta_key\":\"meta_value\"}"
- *     }
+ *     "key"     => "meta_key",
+ *     "value"   => "meta_value",
+ *     "user_id" => "c5323558d6750f5571655b71ae2a2380",
  * }
  */

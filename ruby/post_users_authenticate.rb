@@ -23,7 +23,6 @@ p JSON.parse(response.body)
 #          "first_name" => "Demo",
 #           "last_name" => "User",
 #                "type" => "patient",
-#          "creator_id" => "",
 #          "patient_id" => "658e810c58653ddf197e13e2fae4cd8a"
 #   },
 #   "consumer_token" => {
