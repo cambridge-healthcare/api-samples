@@ -6,7 +6,7 @@
 
   // Note that f1dc85[…] is the patient_id rather than the user_id
   // The patient_id must be used for all clinical data interations
-  var url = 'https://api.howareyou.com/patients/f1dc858d5682c9d76722847399b4bf8e/medications.json';
+  var url = 'https://api.howareyou.com/patients/658e810c58653ddf197e13e2fae4cd8a/medications.json';
 
   var xhr = new XMLHttpRequest();
 
@@ -16,7 +16,7 @@
     }
   }
 
-  var params = { values: '421161003' };
+  var params = { concept_id: '421161003', started_at: '2014-01-13T12:24:29+00:00"'};
 
   xhr.open('POST', url);
   xhr.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
@@ -33,21 +33,7 @@
 })();
 
 /*
- * [
  *   {
- *     "concept_id": 7947003,
- *     "timestamp":  1374502172,
- *     "id":        "1374502172:7947003"
- *   },
- *   {
- *     "concept_id": 90332006,
- *     "timestamp":  1374502172,
- *     "id":        "1374502172:90332006"
- *   },
- *   {
- *     "concept_id": 421161003,
- *     "timestamp":  1374503350,
- *     "id":        "1374503350:421161003"
+ *     "id" => "7e0f54c3-98b6-41a8-9e95-06958eebdf2c"
  *   }
- * ]
  */
