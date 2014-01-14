@@ -19,15 +19,17 @@ headers = {
   }),
 }
 
-params = {"values" => "421161003"}
+params = {"concept_id" => "421161003", "started_at" => "2014-01-13T12:24:29+00:00"}
 
 access_token = OAuth::AccessToken.new(consumer)
 
 # Note that this is the patient_id rather than the user id
 # The patient_id must be used for all clinical data interations
-response = access_token.post("/patients/f1dc858d5682c9d76722847399b4bf8e/medications.json", params, headers)
+response = access_token.post("/patients/658e810c58653ddf197e13e2fae4cd8a/medications.json", params, headers)
 
 p response.body
 
 # =>
-#   ""
+#   {
+#     "id" => "7e0f54c3-98b6-41a8-9e95-06958eebdf2c"
+#   }

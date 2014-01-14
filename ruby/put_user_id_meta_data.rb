@@ -12,9 +12,7 @@ consumer = OAuth::Consumer.new(
 
 access_token = OAuth::AccessToken.new(consumer)
 
-#The data field must be a JSON string.
-data = JSON.dump("meta_key" => "meta_value")
-params = {"data" => data}
+params = {"key" => "meta-key", "value" => "meta-value"}
 
 # These values are required to decrypt data
 # You will have to obtain a new session id and key from the authentication endpoint
@@ -25,14 +23,13 @@ headers = {
   }),
 }
 
-response = access_token.put("/users/7b33dbb398811023a8512cbda455c0c9/meta_data.json", params, headers)
+response = access_token.put("/users/c5323558d6750f5571655b71ae2a2380/meta_data.json", params, headers)
 
 p JSON.parse(response.body)
 
 # =>
 # {
-#   "meta_data" => {
-#     "user_id" => "da0ff676622eaa2faee450b231b322c4",
-#     "data"    => "{\"meta_key\" : \"meta_value\"}"
-#   }
+#     "key"     => "meta_key",
+#     "value"   => "meta_value",
+#     "user_id" => "c5323558d6750f5571655b71ae2a2380",
 # }

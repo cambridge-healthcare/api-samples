@@ -21,19 +21,18 @@ headers = {
 
 access_token = OAuth::AccessToken.new(consumer)
 
-response = access_token.get("/users/7b33dbb398811023a8512cbda455c0c9", headers)
+response = access_token.get("/users/c5323558d6750f5571655b71ae2a2380", headers)
 
 p JSON.parse(response.body)
 
 # =>
 # {
 #     "user" => {
-#                 "id" => "7b33dbb398811023a8512cbda455c0c9",
+#                 "id" => "c5323558d6750f5571655b71ae2a2380",
 #              "email" => "demo@howareyou.com",
 #         "first_name" => "Demo",
 #          "last_name" => "User",
 #               "type" => "patient",
-#         "creator_id" => "",
-#         "patient_id" => "f1dc858d5682c9d76722847399b4bf8e"
+#         "patient_id" => "658e810c58653ddf197e13e2fae4cd8a"
 #     }
 # }

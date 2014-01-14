@@ -24,7 +24,7 @@ access_token = OAuth::AccessToken.new(consumer)
 
 # Note that f1dc85[…] is the patient_id rather than the user_id
 # The patient_id must be used for all clinical data interations
-response = access_token.get("/patients/f1dc858d5682c9d76722847399b4bf8e/blood_glucose?limit=1", headers)
+response = access_token.get("/patients/658e810c58653ddf197e13e2fae4cd8a/blood_glucose?limit=1", headers)
 
 p JSON.parse(response.body)
 
