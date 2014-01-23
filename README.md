@@ -1,2 +1,5 @@
-#Code samples for the how are you developer page.
+# API Samples 
 
+Examples for How are you? APIs.
+
+JavaScript and Ruby versions available.
